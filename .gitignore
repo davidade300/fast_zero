@@ -17,3 +17,6 @@
 
 .venv
 /poetry.toml
+database.db
+.env
+teste_livro.py
