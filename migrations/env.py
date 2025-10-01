@@ -5,13 +5,13 @@ from sqlalchemy import pool
 
 from alembic import context
 from fast_zero.models import table_registry
-from settings import Settings
+from settings import DATABASE_URL
 
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-config.set_main_option('sqlalchemy.url', Settings().DATABASE_URL)  # pyright: ignore[reportCallIssue]
+config.set_main_option('sqlalchemy.url', DATABASE_URL)  # pyright: ignore[reportCallIssue]
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
